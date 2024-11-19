@@ -1,0 +1,115 @@
+.Burguer{
+  width: min-content;
+  align-self: end;
+}
+
+.burguer__button{
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+}
+
+.Burguer .line{
+  display: block;
+  border-radius: .25rem;
+  background-color: var(--main-color);
+  width: 100%;
+  height: .1rem;
+  margin: .45rem auto;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.Burguer .top-line{
+  animation-name: top-line-animation-close;
+}
+
+.Burguer .middle-line{
+  animation-name: middle-line-animation-close;
+}
+
+.Burguer .bottom-line{
+  animation-name: bottom-line-animation-close;
+}
+
+.Burguer .open .top-line{
+  animation-name: top-line-animation-open;
+}
+
+.Burguer .open .middle-line{
+  animation-name: middle-line-animation-open;
+}
+
+.Burguer .open .bottom-line{
+  animation-name: bottom-line-animation-open;
+}
+
+@keyframes top-line-animation-open{
+  50%, 100%{
+    margin: 0 auto;
+    transform: translateY(.1rem) rotate(-45deg);
+  }
+}
+
+@keyframes middle-line-animation-open{
+  20%, 100%{
+    margin: 0 auto;
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes bottom-line-animation-open{
+  50%, 100%{
+    margin: 0 auto;
+    transform: translateY(-.1rem) rotate(45deg);
+  }
+}
+
+@keyframes top-line-animation-close{
+  0%{
+    margin: 0 auto;
+    transform: translateY(.1rem) rotate(-45deg);
+  }
+
+  50%, 100%{
+    margin: .45rem auto;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes middle-line-animation-close{
+  0%{
+    margin: 0 auto;
+    width: 0;
+    opacity: 0;
+  }
+
+  50%, 100%{
+    margin: .45rem auto;
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes bottom-line-animation-close{
+  0%{
+    margin: 0 auto;
+    transform: translateY(-.1rem) rotate(-45deg);
+  }
+
+  50%, 100%{
+    margin: .45rem auto;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@media (min-width: 600px){
+  .Burguer{
+    display: none;
+  }
+}

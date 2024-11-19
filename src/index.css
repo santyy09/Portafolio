@@ -1,0 +1,27 @@
+:root{
+  --main-color: #ff0040;
+  --background-color: #000;
+}
+
+#root{
+  max-width: 100vw;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+body{
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--main-color);
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
